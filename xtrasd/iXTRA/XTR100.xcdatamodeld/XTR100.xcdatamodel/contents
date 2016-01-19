@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="Directory" representedClassName=".Directory" syncable="YES">
+        <attribute name="accessedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="modifiedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="path" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="starred" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="Transformable" indexed="YES" syncable="YES"/>
+        <relationship name="directoryBelongsToADirectory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Directory" inverseName="hasDirectories" inverseEntity="Directory" syncable="YES"/>
+        <relationship name="hasDirectories" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Directory" inverseName="directoryBelongsToADirectory" inverseEntity="Directory" syncable="YES"/>
+        <relationship name="hasFiles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="File" inverseName="fileBelongsToADirectory" inverseEntity="File" syncable="YES"/>
+    </entity>
+    <entity name="File" representedClassName=".File" syncable="YES">
+        <attribute name="accessedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="modifiedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="path" optional="YES" attributeType="String" valueTransformerName="" indexed="YES" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="starred" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="Transformable" indexed="YES" syncable="YES"/>
+        <relationship name="fileBelongsToADirectory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Directory" inverseName="hasFiles" inverseEntity="Directory" syncable="YES"/>
+        <relationship name="mimetype" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Mimetype" inverseName="belongsToFile" inverseEntity="Mimetype" syncable="YES"/>
+    </entity>
+    <entity name="Mimetype" representedClassName=".Mimetype" syncable="YES">
+        <attribute name="fullname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="member" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="belongsToFile" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="File" inverseName="mimetype" inverseEntity="File" syncable="YES"/>
+    </entity>
+    <entity name="Preferences" representedClassName=".Preferences" syncable="YES">
+        <attribute name="autosyncModeValue" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="cameraAutosync" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="chargeOnly" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="defaultSortSet" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="defaultSortValue" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="defaultViewValue" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="persistentFilter" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="persistentFilterValue" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Directory" positionX="-171" positionY="-343" width="225" height="210"/>
+        <element name="File" positionX="-551" positionY="-144" width="128" height="195"/>
+        <element name="Mimetype" positionX="-351" positionY="-288" width="128" height="105"/>
+        <element name="Preferences" positionX="-531" positionY="-430" width="128" height="165"/>
+    </elements>
+</model>

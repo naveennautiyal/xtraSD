@@ -1,0 +1,6 @@
+framework module XTR100 {
+  umbrella header "XTR100.h"
+
+  export *
+  module * { export * }
+}

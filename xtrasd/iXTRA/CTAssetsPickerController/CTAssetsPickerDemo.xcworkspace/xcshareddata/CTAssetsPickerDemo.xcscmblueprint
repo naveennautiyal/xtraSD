@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E762C42BC8C71A1AD1A00E2FC726C42A9BF54268",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E762C42BC8C71A1AD1A00E2FC726C42A9BF54268" : 0,
+    "64F97BC48CA498F89CEEADA8A7C185FB32F5467D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3C54908C-FDA5-4121-BCAB-F98C3933290A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E762C42BC8C71A1AD1A00E2FC726C42A9BF54268" : "CTAssetsPickerController\/",
+    "64F97BC48CA498F89CEEADA8A7C185FB32F5467D" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CTAssetsPickerDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CTAssetsPickerDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "spork.local:iOS\/ixtra_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "64F97BC48CA498F89CEEADA8A7C185FB32F5467D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/github.com\/chiunam\/CTAssetsPickerController",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E762C42BC8C71A1AD1A00E2FC726C42A9BF54268"
+    }
+  ]
+}
